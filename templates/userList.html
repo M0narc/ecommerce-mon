@@ -1,10 +1,43 @@
+{% load static %}
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User list</title>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
-    <h1>User List</h1>
+    <div class="container">
+        <h2 class="text-center mt-5">Users List</h2>
+        <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Usuario</th>
+                <th scope="col">Profesion</th>
+                <th scope="col">Gender</th>
+                <th scope="col">City</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Franco</td>
+                <td>Developer</td>
+                <td>Man</td>
+                <td>Resistencia</td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Developer</td>
+                <td>Man</td>
+                <td>Buenos aires</td>
+              </tr>
+            </tbody>
+          </table>
+
+    </div>
 </body>
 </html>
