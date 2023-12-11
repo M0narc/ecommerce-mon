@@ -14,6 +14,7 @@
             <thead>
               <tr>
                 <th scope="col">id</th>
+                <th scope="col">Pic</th>
                 <th scope="col">Usuario</th>
                 <th scope="col">Profesion</th>
                 <th scope="col">Gender</th>
@@ -21,23 +22,21 @@
               </tr>
             </thead>
             <tbody>
+              {% for usr in get_users %}
               <tr>
-                <th scope="row">1</th>
-                <td>Franco</td>
-                <td>Developer</td>
-                <td>Man</td>
-                <td>Resistencia</td>
+                <th scope="row">{{ usr.id }}</th>
+                <td><img src="{{ usr.photo.url }}" 
+                  width="40"
+                  height="40"
+                  style="border-radius: 50px;"></td>
+                <td>{{ usr.first_name }}</td>
+                <td>{{ usr.Profesion }}</td>
+                <td>{{ usr.Gender }}</td>
+                <td>{{ usr.City }}</td>
               </tr>
-              <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Developer</td>
-                <td>Man</td>
-                <td>Buenos aires</td>
-              </tr>
+              {% endfor %}
             </tbody>
           </table>
-
     </div>
 </body>
 </html>
